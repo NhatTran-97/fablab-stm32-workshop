@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"spi-slave\startup_stm32f103xb.o"
+"spi-slave\main.o"
+"spi-slave\stm32f1xx_it.o"
+"spi-slave\stm32f1xx_hal_msp.o"
+"spi-slave\stm32f1xx_hal_gpio_ex.o"
+"spi-slave\stm32f1xx_hal_adc.o"
+"spi-slave\stm32f1xx_hal_adc_ex.o"
+"spi-slave\stm32f1xx_hal.o"
+"spi-slave\stm32f1xx_hal_rcc.o"
+"spi-slave\stm32f1xx_hal_rcc_ex.o"
+"spi-slave\stm32f1xx_hal_gpio.o"
+"spi-slave\stm32f1xx_hal_dma.o"
+"spi-slave\stm32f1xx_hal_cortex.o"
+"spi-slave\stm32f1xx_hal_pwr.o"
+"spi-slave\stm32f1xx_hal_flash.o"
+"spi-slave\stm32f1xx_hal_flash_ex.o"
+"spi-slave\stm32f1xx_hal_exti.o"
+"spi-slave\stm32f1xx_hal_spi.o"
+"spi-slave\stm32f1xx_hal_tim.o"
+"spi-slave\stm32f1xx_hal_tim_ex.o"
+"spi-slave\system_stm32f1xx.o"
+--strict --scatter "SPI-Slave\SPI-Slave.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "SPI-Slave.map" -o SPI-Slave\SPI-Slave.axf

@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp --branchpatch=sdcomp-29491-629360
+"external_interrupt\startup_stm32l476xx.o"
+"external_interrupt\main.o"
+"external_interrupt\stm32l4xx_it.o"
+"external_interrupt\stm32l4xx_hal_msp.o"
+"external_interrupt\stm32l4xx_hal_tim.o"
+"external_interrupt\stm32l4xx_hal_tim_ex.o"
+"external_interrupt\stm32l4xx_hal.o"
+"external_interrupt\stm32l4xx_hal_rcc.o"
+"external_interrupt\stm32l4xx_hal_rcc_ex.o"
+"external_interrupt\stm32l4xx_hal_flash.o"
+"external_interrupt\stm32l4xx_hal_flash_ex.o"
+"external_interrupt\stm32l4xx_hal_flash_ramfunc.o"
+"external_interrupt\stm32l4xx_hal_gpio.o"
+"external_interrupt\stm32l4xx_hal_i2c.o"
+"external_interrupt\stm32l4xx_hal_i2c_ex.o"
+"external_interrupt\stm32l4xx_hal_dma.o"
+"external_interrupt\stm32l4xx_hal_dma_ex.o"
+"external_interrupt\stm32l4xx_hal_pwr.o"
+"external_interrupt\stm32l4xx_hal_pwr_ex.o"
+"external_interrupt\stm32l4xx_hal_cortex.o"
+"external_interrupt\stm32l4xx_hal_exti.o"
+"external_interrupt\system_stm32l4xx.o"
+--strict --scatter "External_Interrupt\External_Interrupt.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "External_Interrupt.map" -o External_Interrupt\External_Interrupt.axf

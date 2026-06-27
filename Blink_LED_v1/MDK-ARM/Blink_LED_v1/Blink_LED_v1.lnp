@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp --branchpatch=sdcomp-29491-629360
+"blink_led_v1\startup_stm32l476xx.o"
+"blink_led_v1\main.o"
+"blink_led_v1\stm32l4xx_it.o"
+"blink_led_v1\stm32l4xx_hal_msp.o"
+"blink_led_v1\stm32l4xx_hal_tim.o"
+"blink_led_v1\stm32l4xx_hal_tim_ex.o"
+"blink_led_v1\stm32l4xx_hal.o"
+"blink_led_v1\stm32l4xx_hal_rcc.o"
+"blink_led_v1\stm32l4xx_hal_rcc_ex.o"
+"blink_led_v1\stm32l4xx_hal_flash.o"
+"blink_led_v1\stm32l4xx_hal_flash_ex.o"
+"blink_led_v1\stm32l4xx_hal_flash_ramfunc.o"
+"blink_led_v1\stm32l4xx_hal_gpio.o"
+"blink_led_v1\stm32l4xx_hal_i2c.o"
+"blink_led_v1\stm32l4xx_hal_i2c_ex.o"
+"blink_led_v1\stm32l4xx_hal_dma.o"
+"blink_led_v1\stm32l4xx_hal_dma_ex.o"
+"blink_led_v1\stm32l4xx_hal_pwr.o"
+"blink_led_v1\stm32l4xx_hal_pwr_ex.o"
+"blink_led_v1\stm32l4xx_hal_cortex.o"
+"blink_led_v1\stm32l4xx_hal_exti.o"
+"blink_led_v1\system_stm32l4xx.o"
+"blink_led_v1\led_rgb.o"
+--strict --scatter "Blink_LED_v1\Blink_LED_v1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Blink_LED_v1.map" -o Blink_LED_v1\Blink_LED_v1.axf
