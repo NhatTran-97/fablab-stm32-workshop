@@ -38,3 +38,5 @@ dc_pid_controller\robot_control.o: ..\Libs\motor_encoder.h
 dc_pid_controller\robot_control.o: ..\Libs\moving_average.h
 dc_pid_controller\robot_control.o: ..\Libs\pid_control.h
 dc_pid_controller\robot_control.o: ..\Libs\usart_telemetry.h
+dc_pid_controller\robot_control.o: ..\Libs\vel_ramp.h
+dc_pid_controller\robot_control.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

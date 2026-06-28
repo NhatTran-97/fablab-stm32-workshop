@@ -24,5 +24,7 @@ pid_typedef apply_pid(pid_instance *pid, float input_error);
 void reset_pid(pid_instance *pid);
 void set_pid(pid_instance *pid, float p, float i, float d,
              float sam_rate, float pid_max, float integral_max);
+void set_pid_gains(pid_instance *pid, float p, float i, float d,
+                   float sam_rate, float pid_max, float integral_max);
 
 #endif  // INC_PID_CONTROL_H_

@@ -40,3 +40,5 @@ dc_pid_controller\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 dc_pid_controller\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 dc_pid_controller\main.o: ../Libs/usart_telemetry.h
 dc_pid_controller\main.o: ../Libs/robot_control.h
+dc_pid_controller\main.o: ../Libs/vel_ramp.h
+dc_pid_controller\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

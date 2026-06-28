@@ -1,6 +1,6 @@
 Dependencies for Project 'DC_PID_Controller', Target 'DC_PID_Controller': (DO NOT MODIFY !)
 F (startup_stm32l476xx.s)(0x6A3EC420)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "STM32L476xx SETA 1"--list startup_stm32l476xx.lst --xref -o dc_pid_controller\startup_stm32l476xx.o --depend dc_pid_controller\startup_stm32l476xx.d)
-F (../Core/Src/main.c)(0x6A3FC924)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\main.o --omf_browse dc_pid_controller\main.crf --depend dc_pid_controller\main.d)
+F (../Core/Src/main.c)(0x6A411186)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\main.o --omf_browse dc_pid_controller\main.crf --depend dc_pid_controller\main.d)
 I (../Core/Inc/main.h)(0x6A3C942F)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x69C49A39)
 I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6A3EC06D)
@@ -36,11 +36,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x69C49A39)
 I (../Libs/motor_control.h)(0x6A3F9AC8)
 I (../Libs/motor_encoder.h)(0x6A3F9AC6)
 I (../Libs/moving_average.h)(0x6A3F9A92)
-I (../Libs/pid_control.h)(0x6A3F9A91)
+I (../Libs/pid_control.h)(0x6A410079)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
-I (../Libs/usart_telemetry.h)(0x6A3F9D42)
-I (../Libs/robot_control.h)(0x6A3FA4F5)
+I (../Libs/usart_telemetry.h)(0x6A40BE1C)
+I (../Libs/robot_control.h)(0x6A40F63A)
+I (../Libs/vel_ramp.h)(0x6A40F7AF)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB87E6)
 F (../Core/Src/stm32l4xx_it.c)(0x6A3EC06D)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\stm32l4xx_it.o --omf_browse dc_pid_controller\stm32l4xx_it.crf --depend dc_pid_controller\stm32l4xx_it.d)
 I (../Core/Inc/main.h)(0x6A3C942F)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x69C49A39)
@@ -819,8 +821,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x69C49A39)
 I (..\Libs\moving_average.h)(0x6A3F9A92)
 F (..\Libs\motor_encoder.h)(0x6A3F9AC6)()
-F (..\Libs\pid_control.c)(0x6A3F9ADF)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\pid_control.o --omf_browse dc_pid_controller\pid_control.crf --depend dc_pid_controller\pid_control.d)
-I (..\Libs\pid_control.h)(0x6A3F9A91)
+F (..\Libs\pid_control.c)(0x6A410066)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\pid_control.o --omf_browse dc_pid_controller\pid_control.crf --depend dc_pid_controller\pid_control.d)
+I (..\Libs\pid_control.h)(0x6A410079)
 I (../Core/Inc/main.h)(0x6A3C942F)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x69C49A39)
 I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6A3EC06D)
@@ -853,7 +855,7 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x69C49A39)
-F (..\Libs\pid_control.h)(0x6A3F9A91)()
+F (..\Libs\pid_control.h)(0x6A410079)()
 F (..\Libs\moving_average.h)(0x6A3F9A92)()
 F (..\Libs\moving_average.c)(0x6A3F9ADF)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\moving_average.o --omf_browse dc_pid_controller\moving_average.crf --depend dc_pid_controller\moving_average.d)
 I (..\Libs\moving_average.h)(0x6A3F9A92)
@@ -889,9 +891,9 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x69C49A39)
-F (..\Libs\usart_telemetry.h)(0x6A3F9D42)()
-F (..\Libs\usart_telemetry.c)(0x6A3FB5C2)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\usart_telemetry.o --omf_browse dc_pid_controller\usart_telemetry.crf --depend dc_pid_controller\usart_telemetry.d)
-I (..\Libs\usart_telemetry.h)(0x6A3F9D42)
+F (..\Libs\usart_telemetry.h)(0x6A40BE1C)()
+F (..\Libs\usart_telemetry.c)(0x6A40C2CB)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\usart_telemetry.o --omf_browse dc_pid_controller\usart_telemetry.crf --depend dc_pid_controller\usart_telemetry.d)
+I (..\Libs\usart_telemetry.h)(0x6A40BE1C)
 I (../Core/Inc/main.h)(0x6A3C942F)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x69C49A39)
 I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6A3EC06D)
@@ -924,12 +926,12 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x69C49A39)
-I (..\Libs\pid_control.h)(0x6A3F9A91)
+I (..\Libs\pid_control.h)(0x6A410079)
 I (..\Libs\motor_encoder.h)(0x6A3F9AC6)
 I (..\Libs\moving_average.h)(0x6A3F9A92)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
-F (..\Libs\robot_control.c)(0x6A3FC792)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\robot_control.o --omf_browse dc_pid_controller\robot_control.crf --depend dc_pid_controller\robot_control.d)
-I (..\Libs\robot_control.h)(0x6A3FA4F5)
+F (..\Libs\robot_control.c)(0x6A4110C2)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\robot_control.o --omf_browse dc_pid_controller\robot_control.crf --depend dc_pid_controller\robot_control.d)
+I (..\Libs\robot_control.h)(0x6A40F63A)
 I (..\Libs\motor_control.h)(0x6A3F9AC8)
 I (../Core/Inc/main.h)(0x6A3C942F)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x69C49A39)
@@ -965,6 +967,44 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x69C49A39)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x69C49A39)
 I (..\Libs\motor_encoder.h)(0x6A3F9AC6)
 I (..\Libs\moving_average.h)(0x6A3F9A92)
-I (..\Libs\pid_control.h)(0x6A3F9A91)
-I (..\Libs\usart_telemetry.h)(0x6A3F9D42)
-F (..\Libs\robot_control.h)(0x6A3FA4F5)()
+I (..\Libs\pid_control.h)(0x6A410079)
+I (..\Libs\usart_telemetry.h)(0x6A40BE1C)
+I (..\Libs\vel_ramp.h)(0x6A40F7AF)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB87E6)
+F (..\Libs\robot_control.h)(0x6A40F63A)()
+F (..\Libs\vel_ramp.h)(0x6A40F7AF)()
+F (..\Libs\vel_ramp.c)(0x6A40F5D1)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Libs-I.\RTE\_DC_PID_Controller-IC:\Users\dnnev\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\dnnev\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o dc_pid_controller\vel_ramp.o --omf_browse dc_pid_controller\vel_ramp.crf --depend dc_pid_controller\vel_ramp.d)
+I (..\Libs\vel_ramp.h)(0x6A40F7AF)
+I (../Core/Inc/main.h)(0x6A3C942F)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x69C49A39)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6A3EC06D)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x69C49A39)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x69C49A39)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h)(0x69C49A39)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x69C499FF)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x69C499FF)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x69C499FF)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x69C499FF)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x69C499FF)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x69C49A39)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_exti.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x69C49A39)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x69C49A39)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB87E6)

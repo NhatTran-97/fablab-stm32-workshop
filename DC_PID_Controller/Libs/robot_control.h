@@ -5,6 +5,7 @@
 #include "motor_encoder.h"
 #include "pid_control.h"
 #include "usart_telemetry.h"
+#include "vel_ramp.h"
 
 typedef enum {
     MODE_VELOCITY,   
@@ -32,11 +33,14 @@ extern pid_instance pid_pos_right;
 extern float setpoint_motor_left;
 extern float setpoint_motor_right;
 extern float pos_setpoint_left;     
-extern float pos_setpoint_right;     
-
+extern float pos_setpoint_right;   
 
 extern telem_tx_payload_t telem_data;
 extern robot_mode_t robot_mode;  
+
+
+extern vel_ramp_t ramp_left;
+extern vel_ramp_t ramp_right;
 
 // API
 void robot_control_init(void);

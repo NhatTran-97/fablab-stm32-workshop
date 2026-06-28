@@ -684,6 +684,16 @@
               <FileType>5</FileType>
               <FilePath>..\Libs\robot_control.h</FilePath>
             </File>
+            <File>
+              <FileName>vel_ramp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Libs\vel_ramp.h</FilePath>
+            </File>
+            <File>
+              <FileName>vel_ramp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Libs\vel_ramp.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

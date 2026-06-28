@@ -29,6 +29,7 @@
 "dc_pid_controller\moving_average.o"
 "dc_pid_controller\usart_telemetry.o"
 "dc_pid_controller\robot_control.o"
+"dc_pid_controller\vel_ramp.o"
 --strict --scatter "DC_PID_Controller\DC_PID_Controller.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

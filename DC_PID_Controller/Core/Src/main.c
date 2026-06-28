@@ -29,6 +29,7 @@
 	#include "string.h"
 	#include "usart_telemetry.h"
 	#include "robot_control.h" 
+	#include "vel_ramp.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,19 +52,25 @@ pid_instance pid_motor_right;
 
 
 
-float setpoint_motor_left = 10.0f;
-float setpoint_motor_right = 10.0f;
+float setpoint_motor_left = 0.0f;
+float setpoint_motor_right = 0.0f;
 
 
 float pos_setpoint_left      = 0.0f;
 float pos_setpoint_right     = 0.0f;
-robot_mode_t robot_mode      = MODE_VELOCITY;
+robot_mode_t robot_mode      = MODE_POSITION;
 
 pid_instance pid_pos_left;
 pid_instance pid_pos_right;
 
+vel_ramp_t ramp_left;
+vel_ramp_t ramp_right;
+
+
 volatile uint8_t timer_flag;
 
+ 
+telem_rx_payload_t debug_last_cmd;
 
 /* USER CODE END PD */
 
@@ -156,6 +163,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start_IT(&htim4);
 	
+	//uint16_t tx_size = sizeof(telem_tx_payload_t);  
+	//uint16_t rx_size = sizeof(telem_rx_payload_t);
+	
 	robot_control_init();
 	
 	uint32_t last_uart_telem = 0;
@@ -177,7 +187,7 @@ int main(void)
 		}
 
 		uint32_t now = HAL_GetTick();
-    if(now - last_uart_telem >= 10)
+    if(now - last_uart_telem >= 1)
     {
         last_uart_telem = now;
         robot_control_telem_send();

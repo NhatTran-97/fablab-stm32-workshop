@@ -15,6 +15,20 @@ void set_pid(pid_instance *pid, float p, float i, float d,
     pid->integral_max   = integral_max;
 }
 
+
+void set_pid_gains(pid_instance *pid, float p, float i, float d,
+                   float sam_rate, float pid_max, float integral_max)
+{
+    // Ch? update gains, KHÔNG reset state
+    pid->p_gain       = p;
+    pid->i_gain       = i;
+    pid->d_gain       = d;
+    pid->sam_rate     = sam_rate;
+    pid->pid_max      = pid_max;
+    pid->integral_max = integral_max;
+   
+}
+
 void reset_pid(pid_instance *pid)
 {
 	pid->error_integral = 0;
